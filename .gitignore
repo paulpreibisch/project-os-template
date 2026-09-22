@@ -1,0 +1,50 @@
+# dependencies
+node_modules/
+web/node_modules/
+
+# build output (regenerate with: npm run build:web)
+web/dist/
+
+# runtime logs
+*.log
+server.log
+server.err.log
+
+# Per-tenant data: journal, contacts, whiteboard, testimonials — real names,
+# emails, phone numbers, message content. Never commit a real tenant's data/
+# folder. The `demo` tenant is the one deliberate exception: it ships with
+# prompts instead of real content, so its starter data is meant to be tracked.
+projects/*/data/
+!projects/demo/data/
+!projects/demo/data/**
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# AI tooling you may install into this folder — not part of the OS itself
+.agentvibes/
+.claude/
+.codex/
+_bmad/
+.mcp.json
+
+# stray log artifacts
+*.old
+
+# Credentials dropped here during setup — never commit
+token.txt
+*.token
+*secret*.txt
+
+# Per-tenant integration state (connected account + timestamps). Holds no
+# tokens, but it can name real accounts, so it stays local.
+projects/*/private/
+
+# local Basic-auth password for network access to the board — never commit
+.os-auth
+.os-auth.*
+
+# Cloudflare Access service-token credentials, if you put a deployment behind
+# one — never commit
+.cf-access.json

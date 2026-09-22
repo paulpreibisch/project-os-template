@@ -1,0 +1,51 @@
+# Project OS — example deployment.
+#
+# Minimal hardening: read-only root filesystem, no extra Linux capabilities,
+# non-root user, no Docker socket. The one writable path is projects/, bind-
+# mounted from the host so config.json / public/ / data/ survive a rebuild.
+#
+# Set an .os-auth file (a plain-text password, gitignored) next to this file
+# before starting — the server refuses to serve anything without one. See
+# README.md.
+
+services:
+  project-os:
+    build: .
+    image: project-os:latest
+    container_name: project-os
+    restart: unless-stopped
+
+    user: "10001:10001"
+
+    environment:
+      OS_HOST: "0.0.0.0"
+      PORT: "4317"
+
+    volumes:
+      # The one writable path: config.json, public/, data/ for every project.
+      - ./projects:/app/projects
+      # The password file the auth gate reads. Create it yourself: a single
+      # line, no trailing newline, mode 600.
+      - ./.os-auth:/app/.os-auth:ro
+
+    ports:
+      - "4317:4317"
+
+    # --- Hardening --------------------------------------------------------
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+    mem_limit: 768m
+    pids_limit: 256
+
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://127.0.0.1:4317/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

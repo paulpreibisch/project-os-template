@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="theme-color" content="#2a0a0e" />
+    <!-- Neutral placeholder only. Root.jsx replaces this with the tenant's own brand
+         name as soon as its config loads. Never hardcode a tenant name here: this file
+         is shared by every project, so a name written here is both wrong in every other
+         project's browser tab and visible in their page source. That has regressed once
+         already. -->
+    <title>Project OS</title>
+    <!-- Fonts are served from this origin, not Google's. See web/public/fonts/fonts.css:
+         a third-party <link> would hand every viewer's IP and referring page to another
+         company on every single load, which a password-protected private board should
+         not do. Self-hosting is also what lets the CSP restrict styles/fonts to 'self'. -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

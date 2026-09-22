@@ -1,0 +1,10 @@
+.git
+node_modules
+web/node_modules
+web/dist
+server.log
+server.err.log
+.os-auth
+projects/*/data
+projects/*/private
+*.md

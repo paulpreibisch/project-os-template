@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#4a1319"/>
+      <stop offset="55%" stop-color="#2a0a0e"/>
+      <stop offset="100%" stop-color="#170406"/>
+    </radialGradient>
+    <radialGradient id="sun" cx="34%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#f9a24b"/>
+      <stop offset="45%" stop-color="#f47720"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </radialGradient>
+  </defs>
+
+  <!-- burgundy tile -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#paper)"/>
+  <!-- art-deco gold frame -->
+  <rect x="6.5" y="6.5" width="51" height="51" rx="10" fill="none" stroke="#c9a24b" stroke-width="1.6"/>
+  <rect x="9" y="9" width="46" height="46" rx="8" fill="none" stroke="#c9a24b" stroke-opacity="0.55" stroke-width="0.8"/>
+
+  <!-- salsa sun disc -->
+  <circle cx="32" cy="33" r="14.5" fill="url(#sun)"/>
+  <circle cx="32" cy="33" r="14.5" fill="none" stroke="#e6c063" stroke-width="1.4"/>
+  <!-- highlight -->
+  <ellipse cx="27" cy="27.5" rx="4.6" ry="3.2" fill="#ffffff" fill-opacity="0.28"/>
+
+  <!-- gold sparkle accent -->
+  <g fill="#e6c063">
+    <path d="M49 15 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5 -4 -4 -1.5 4 -1.5 z"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "title": "Contact List",
+  "note": "This tab is read-only by design — it's meant to be rebuilt by your own compile script (see README.md) from whatever sources you actually have: sign-in sheets, a payment provider export, a CRM. This is one example row showing the shape it expects.",
+  "people": [
+    {
+      "name": "Example Person",
+      "email": "example@example.com",
+      "phone": "",
+      "tier": 1,
+      "tierLabel": "Warm",
+      "paid": false,
+      "confidence": "high",
+      "sheetPage": null,
+      "sourceCount": 1,
+      "sources": ["manual"],
+      "note": "Replace with real rows from your own compile script."
+    }
+  ],
+  "stats": {
+    "reachable": 1,
+    "withEmail": 1,
+    "withPhone": 0,
+    "both": 0,
+    "multiSource": 0,
+    "lowConfidence": 0,
+    "byTier": [
+      { "tier": 1, "label": "Warm", "count": 1 },
+      { "tier": 2, "label": "Cool", "count": 0 }
+    ]
+  }
+}

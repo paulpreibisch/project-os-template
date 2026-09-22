@@ -1,0 +1,45 @@
+{
+  "slug": "demo",
+  "brand": {
+    "name": "Demo Project",
+    "subtitle": "Project OS",
+    "signature": "— Demo Project",
+    "logo": "radial(circle at 32% 30%, #5dade2, #2c6fa6 70%)",
+    "liveLabel": "live",
+    "kicker": "Project board"
+  },
+  "theme": {
+    "red": "#2c6fa6",
+    "accent": "#5dade2",
+    "gold": "#e0a830",
+    "green": "#27ae60",
+    "greenBright": "#2ecc71",
+    "blue": "#5dade2",
+    "purple": "#bb8fce",
+    "bg": "#0c0f14",
+    "panel": "#141a22",
+    "card": "#1a212b",
+    "border": "#28323f",
+    "text": "#e8eef5",
+    "muted": "#8fa2b5",
+    "faint": "#5a6a7a",
+    "heroGradient": "linear(135deg, #0d1420 0%, #12233a 45%, #0d1420 100%)",
+    "heroGlow": "radial(ellipse 80% 60% at 15% 0%, rgba(93,173,226,0.20), transparent 70%)",
+    "selection": "rgba(93,173,226,0.3)"
+  },
+  "dashboard": { "kind": "project" },
+  "modules": [
+    { "id": "dashboard", "label": "Dashboard" },
+    { "id": "journal", "label": "Journal" },
+    { "id": "mission", "label": "Mission" },
+    { "id": "goals", "label": "Goals" },
+    { "id": "roadmap", "label": "Roadmap" },
+    { "id": "whoswho", "label": "Who's Who" },
+    { "id": "contactlist", "label": "📣 Contact List" },
+    { "id": "testimonials", "label": "💬 Testimonials" },
+    { "id": "whiteboard", "label": "Whiteboard" }
+  ],
+  "port": 4317,
+  "sourceDir": null,
+  "updater": { "enabled": false, "sessions": false }
+}

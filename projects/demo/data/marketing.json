@@ -1,0 +1,89 @@
+{
+  "meta": {
+    "project": "Demo Project",
+    "updatedAt": "2026-09-22T07:51:54.242Z",
+    "dayCount": 1,
+    "tagline": "Replace this with a one-line description of what this project actually is."
+  },
+  "overview": "This is the demo tenant — it shows the shape of a Project OS board with prompts in place of real content. Answer each question yourself, or point an AI assistant (Claude Code, or any AI with file access) at this project's data/marketing.json and ask it to fill each section in based on what you tell it about the project. When you're ready for your own board, run `node scaffold.mjs <slug> \"Project Name\"` from the repo root.",
+  "stats": {},
+  "links": [],
+  "event": null,
+  "journal": [
+    {
+      "day": 1,
+      "date": "2026-09-22",
+      "title": "Kickoff — replace with what actually happened",
+      "summary": "The journal is your work log. Each entry is a day's worth of what happened, what got done, and what's next. Log entries by hand with `node osctl.mjs journal \"Title\" \"What happened\"`, or let the AI updater summarize your Claude Code sessions automatically (see README.md).",
+      "done": [
+        "A concrete thing that actually got finished today",
+        "Another one"
+      ],
+      "next": [
+        "What you're planning to do next"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "id": "example-contact",
+      "name": "Example Contact — replace me",
+      "role": "Who is this? Founder, advisor, client, collaborator…",
+      "bio": "One or two sentences: how you know them and why they matter to this project.",
+      "photo": null,
+      "initials": "EC",
+      "relType": "warm",
+      "tags": [],
+      "igHandle": "",
+      "links": [],
+      "lastContact": {
+        "date": "2026-09-22",
+        "channel": "email",
+        "note": "What was the last real interaction with this person?"
+      }
+    }
+  ],
+  "goals": [
+    {
+      "title": "Name a real goal here",
+      "status": "on-track",
+      "metric": "What number or milestone proves this is done?",
+      "target": 100,
+      "current": null,
+      "baseline": null,
+      "unit": "",
+      "note": "Why does this goal matter, and what happens if you miss it?"
+    }
+  ],
+  "goalsHorizon": "What time frame are these goals measured against — this quarter, this launch, this year?",
+  "roadmap": {
+    "vision": "One paragraph: where does this project end up if everything goes right?",
+    "phases": [
+      {
+        "title": "Phase 1 — name it",
+        "status": "active",
+        "period": "e.g. Sep–Oct 2026",
+        "goal": "What has to be true by the end of this phase?",
+        "items": [
+          "A concrete piece of work that belongs in this phase",
+          "Another one"
+        ]
+      },
+      {
+        "title": "Phase 2 — name it",
+        "status": "upcoming",
+        "period": "",
+        "goal": "What comes after phase 1?",
+        "items": []
+      }
+    ]
+  },
+  "mission": {
+    "statement": "What is this project's mission — the one sentence you'd tell a stranger?",
+    "vision": "Where does this go in 12 months if everything works?",
+    "positioning": "How is this different from the obvious alternative, and for whom?",
+    "values": [
+      "Replace with 3-5 words each"
+    ]
+  }
+}

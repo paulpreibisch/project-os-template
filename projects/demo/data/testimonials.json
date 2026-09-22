@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "example",
+      "name": "Example Reviewer",
+      "context": "How they know the project — a client, a user, a collaborator",
+      "location": "",
+      "locationGroup": "",
+      "lang": "en",
+      "quote": "Replace this with a real quote once you have one. Add new rows by hand, or wire up a scan of wherever testimonials actually arrive for you.",
+      "featured": false,
+      "status": "new",
+      "source": "manual",
+      "sourceUid": null,
+      "foundAt": "2026-09-22T00:00:00.000Z",
+      "publishedAt": null,
+      "updatedAt": "2026-09-22T00:00:00.000Z"
+    }
+  ],
+  "updatedAt": "2026-09-22T00:00:00.000Z"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "project-os",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-project 'Project OS' — config-driven dashboard/journal/contacts/whiteboard per tenant (projects/<slug>), filled in with AI help.",
+  "scripts": {
+    "start": "node server/index.mjs",
+    "refresh": "node updater/refresh.mjs",
+    "scaffold": "node scaffold.mjs",
+    "build:web": "npm --prefix web run build"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "node-cron": "^3.0.3"
+  }
+}
