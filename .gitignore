@@ -22,9 +22,15 @@ projects/*/data/
 .DS_Store
 Thumbs.db
 
-# AI tooling you may install into this folder — not part of the OS itself
+# AI tooling you may install into this folder — not part of the OS itself.
+# Exception: .claude/skills/onboard ships with the template (see README.md).
+# Git can't re-include a path whose parent directory is ignored outright, so
+# this steps down the tree rather than excluding .claude/ in one line.
 .agentvibes/
-.claude/
+.claude/*
+!.claude/skills/
+.claude/skills/*
+!.claude/skills/onboard/
 .codex/
 _bmad/
 .mcp.json
