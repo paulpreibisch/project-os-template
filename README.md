@@ -53,6 +53,29 @@ transcripts in that folder (see "The AI updater" below) — omit it for a
 manual board. The new project shows up in the project dropdown on next page
 load; no restart needed.
 
+## Filling it in with Claude Code
+
+Once a board exists (the `demo` one, or one you just scaffolded), open its
+project folder in Claude Code and ask it to fill the board in — the repo
+ships a skill for exactly this, at `.claude/skills/onboard/`:
+
+```
+help me fill in my board
+```
+
+or invoke it directly:
+
+```
+/onboard
+```
+
+It interviews you one section at a time — Mission, then Goals (with a
+timeframe), then Roadmap (a vision plus phases) — asks whether you also want
+Who's Who, Contact List and/or Testimonials turned on, and writes real
+answers into `data/marketing.json` and `config.json`, merging in without
+touching anything else. It never invents an answer for you: skip a question
+and that field just keeps its original prompt text for you to come back to.
+
 ## The shape of it
 
 | Path | What it is |
@@ -65,6 +88,7 @@ load; no restart needed.
 | `updater/refresh.mjs` | The AI updater: reads Claude Code sessions, asks `claude -p` for a journal/contacts patch, merges it in. |
 | `osctl.mjs` | CLI to read/write a board from a project folder — `info`, `show`, `journal`, `contact`, `note`, `open`. |
 | `scaffold.mjs` | Creates a new tenant. |
+| `.claude/skills/onboard/` | The Claude Code skill that interviews you to fill in Mission/Goals/Roadmap. See "Filling it in with Claude Code" above. |
 
 **One rule that's easy to get wrong:** `data/marketing.json` is rewritten
 wholesale by the AI updater on every run. Anything a *human* types, or that
